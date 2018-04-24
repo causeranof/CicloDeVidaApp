@@ -12,18 +12,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
         Toast.makeText(this, "Estamos en el onCreate", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "Estamos en el onStart", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Estamos en el onStart", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -41,12 +36,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        Toast.makeText(this, "Estamos en el onStop", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Estamos en el onStop", Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "Estamos en el onDestroy", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Estamos en el onDestroy", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this, "Estamos en el onRestart", Toast.LENGTH_LONG).show();
     }
 }
